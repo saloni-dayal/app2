@@ -1,0 +1,10 @@
+<h3>Child Module</h3>
+	
+<input type="text" #moduletwo/>
+
+<button (click)="submit(moduletwo)">Send Data To parent module</button>
+
+<h3>Parent Module Data<h3>
+<div *ngFor="let o of InputList">
+<span>{{o}}</span>
+</div>

@@ -1,0 +1,12 @@
+
+		<h3>Parent Module</h3>
+	
+		<input type="text" #moduletwo/>
+	
+		<button (click)="submit(moduletwo)">Send Data To child module</button>
+		
+
+		<h3>Child Module Data<h3>
+	<div *ngFor="let o of InputList">
+		<span>{{o}}</span>
+    </div>

@@ -1,0 +1,21 @@
+.default
+{
+    background-color: yellow;
+    color: red;
+}
+.red
+{
+    font-size: 50px;
+    background-color: red;
+    color: white;
+}
+.green
+{
+    font-weight: bold;
+    color: green;
+}
+.blue
+{
+    color:skyblue;
+}
+
