@@ -5,6 +5,8 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedService {
+  theme: string = 'default';
+  
   private cssClassSubject = new BehaviorSubject<string>('default');
 
   setCssClass(cssClass: string) {

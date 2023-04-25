@@ -8,6 +8,10 @@ import { BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class PostService {
+
+  
+
+
   SharingData: Subject<any> = new Subject<any>();
   ModuleOneSub: Subject<any> = new Subject<any>();
   ModuleTwoSub: Subject<any> = new Subject<any>();

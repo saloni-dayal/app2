@@ -9,6 +9,9 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { FormsModule } from '@angular/forms';
 import { CssSelectorComponent } from './parent/css-selector/css-selector.component';
+import { ThemeSwitcherComponent } from './theme-switcher/theme-switcher.component';
+import { ThemedBoxComponent } from './child/themed-box/themed-box.component';
+import { ChildPipe } from './child/child.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { CssSelectorComponent } from './parent/css-selector/css-selector.compone
     ParentComponent,
     DropdownDirective,
     DropdownComponent,
-    CssSelectorComponent
+    CssSelectorComponent,
+    ThemeSwitcherComponent,
+    ThemedBoxComponent,
+    ChildPipe
   ],
   imports: [
     BrowserModule,

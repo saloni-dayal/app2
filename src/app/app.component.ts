@@ -8,3 +8,18 @@ import { Component } from '@angular/core';
 export class AppComponent {
  
 }
+
+
+
+// @Component({
+//   selector: 'app-root',
+//   template: `
+//     <app-parent>
+//       <app-child>
+//         <p>This content will be themed.</p>
+//       </app-child>
+//     </app-parent>
+//   `
+// })
+// export class AppComponent {}
+

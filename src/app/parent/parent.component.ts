@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PostService } from '../services/post.service';
 
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -20,3 +21,18 @@ export class ParentComponent {
     input.value = "";
   }
 }
+
+// @Component({
+//   selector: 'app-parent',
+//   template: ` <app-theme-switcher (themeSelected)="onThemeSelected($event)"></app-theme-switcher>
+//   <div [ngClass]="selectedTheme">
+//     <ng-content></ng-content>
+//   </div>  `
+// })
+// export class ParentComponent {
+//   selectedTheme = 'light';
+
+//   onThemeSelected(theme: string) {
+//     this.selectedTheme = theme;
+//   }
+// }

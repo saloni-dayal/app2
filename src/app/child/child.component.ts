@@ -4,8 +4,28 @@ import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-child',
-  templateUrl: './child.component.html',
-  styleUrls: ['./child.component.css']
+  template: `<h6>Child Module</h6>
+	
+  <input type="text" #tomoduletwo/>
+  <br><br>
+  
+  <button class="btn btn-primary" (click)="submit(tomoduletwo)">Submit</button>
+  <br>
+  <br>
+  <p>{{ 'Data Sent From Parent Module' | child}}</p>
+      <div [ngClass]="{'dark-theme': sharedService.theme === 'dark'}">
+        <ng-content></ng-content>
+  <div *ngFor="let item of InputList">
+  <span>{{item}}</span>
+  </div>
+  </div>
+  `,
+  styles: [`
+    .dark-theme {
+      background-color: #333;
+      color: white;
+    }
+  `]
 })
 export class ChildComponent {
 
@@ -13,7 +33,7 @@ export class ChildComponent {
   cssClass = 'default';
 
   InputList: Array<string> = [];
-  constructor(private _postService: PostService, private sharedService: SharedService ) {
+  constructor(private _postService: PostService, public sharedService: SharedService) {
     this._postService.ModuleOneSub.subscribe(o => {
       this.InputList.push(o);
     });
@@ -29,3 +49,14 @@ export class ChildComponent {
     input.value = "";
   }
 }
+
+// import { Component } from '@angular/core';
+
+// @Component({
+//   selector: 'app-child',
+//   template: `
+//     <h1>Themed content:</h1>
+//     <ng-content></ng-content>
+//   `
+// })
+// export class ChildComponent {}
